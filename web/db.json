@@ -1,0 +1,15 @@
+{
+  "pet": [
+    {
+      "owner": "Josue Neneve",
+      "name": "Apollo",
+      "genero": "1",
+      "type": "1",
+      "description": "Gosta muito de brincar.",
+      "image_url": {
+        "path": "dog-820014_1920.jpg"
+      },
+      "id": 1
+    }
+  ]
+}

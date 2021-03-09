@@ -1,0 +1,97 @@
+#create-pet {
+    /* border: 1px solid #000; */
+    height: 100vh;
+    padding: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#create-pet form {
+    display: flex;
+    flex-direction: column;
+}
+
+#create-pet h1 {
+    color: #FCFAF0;
+}
+
+#create-pet form .field-group {
+    margin-top: 55px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#create-pet form .field-group .field input[type=text] {
+    width: 380px;
+    padding: 18px 15px;
+
+    background: #FCFAF0;
+    border-radius: 5px;
+    border: 0px;
+    
+    outline: none;
+}
+
+#create-pet form .field-group .field input::placeholder {
+    color: var(--title-color);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#create-pet form .field-group .field select {
+    width: 380px;
+    padding: 18px 15px;
+
+    background: #FCFAF0;
+    border-radius: 5px;
+    border: 0px;
+    
+    outline: none;
+}
+
+#create-pet form .field-group .field textarea {
+    width: 380px;
+    padding: 18px 15px;
+
+    background: #FCFAF0;
+    border-radius: 5px;
+    border: 0px;
+    
+    outline: none;
+}
+
+#create-pet form .field-group .field + .field {
+    margin-top: 20px;
+}
+
+#create-pet form button {
+    margin-top: 48px;
+    width: 125px;
+    padding: 12px 26px;
+    
+    border-radius: 5px;
+    border: 0;
+    background: #37BEB0;
+    
+    color: #fff;
+    font-size: .9em;
+    font-weight: 500;
+
+    cursor: pointer;
+    transition: all .25 ease;
+    outline: none;
+
+    align-self: flex-end;
+}
+
+#create-pet form button:hover {
+    opacity: .7;
+}
+
+#create-pet form button:active {
+    opacity: .5;
+    transform: scale(.95);
+}
