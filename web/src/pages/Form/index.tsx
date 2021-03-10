@@ -1,5 +1,6 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { useHistory } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import api from '../../services/api';
 
 import './styles.css';
@@ -45,6 +46,8 @@ function Form() {
         setSelectType(type);
     }
 
+    toast.configure();
+
     async function handleSubmit(event: FormEvent) {
         event.preventDefault();
 
@@ -63,7 +66,11 @@ function Form() {
         
         await api.post('pet', data);
 
-        alert('Cadastro criado!');
+        toast.success('Cadastro criado!', {
+            position: toast.POSITION.TOP_RIGHT,
+            autoClose: 2000,
+            hideProgressBar: true,
+        });
 
         history.push('/');
     }
