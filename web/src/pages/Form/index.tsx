@@ -69,7 +69,7 @@ function Form() {
         toast.success('Cadastro criado!', {
             position: toast.POSITION.TOP_RIGHT,
             autoClose: 2000,
-            hideProgressBar: true,
+            hideProgressBar: false,
         });
 
         history.push('/');
