@@ -1,0 +1,7 @@
+footer {
+    padding: var(--padding-all-side);
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
