@@ -29,7 +29,7 @@ function Registration() {
     const { name, email, genero, type } = formData;
 
     useEffect(() => {
-        api.get('/users').then(resp => {
+        api.get('/posts').then(resp => {
             setUsers(resp.data);
         });
     }, []);
@@ -56,7 +56,7 @@ function Registration() {
         const data = { ...formData };
 
         const method = data.id !== null ? 'put' : 'post';
-        const url = method !== 'post' ? `/users/${data.id}` : '/users';
+        const url = method !== 'post' ? `/posts/${data.id}` : '/posts';
 
         api[method](url, data).then(resp => {
             const list = getUpdateList(resp.data);
@@ -66,7 +66,7 @@ function Registration() {
     }
 
     function handleDeleteUser(user: User) {
-        api.delete(`/users/${user.id}`);
+        api.delete(`/posts/${user.id}`);
         const list = getUpdateList(user, true);
         setUsers(list);
     }
